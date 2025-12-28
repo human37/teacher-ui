@@ -201,6 +201,32 @@ const clearSelection = () => {
   min-width: 300px;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .picker-section {
+    padding: 0.875rem;
+    min-width: 280px;
+  }
+  
+  .picker-title {
+    font-size: 1.125rem;
+    margin-bottom: 0.625rem;
+  }
+  
+  .selected-item {
+    font-size: 1.375rem;
+    padding: 0.625rem 0.875rem;
+  }
+  
+  .preset-options {
+    gap: 0.75rem;
+  }
+  
+  .picker-display {
+    margin-bottom: 0.875rem;
+    min-height: 35px;
+  }
+}
+
 .picker-title {
   font-size: 1.25rem;
   font-weight: 900;
@@ -300,6 +326,13 @@ const clearSelection = () => {
   flex-shrink: 0;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .items-list {
+    height: 120px;
+    max-height: 180px;
+  }
+}
+
 .item-row {
   display: flex;
   gap: 0.5rem;
@@ -350,6 +383,18 @@ const clearSelection = () => {
   gap: 0.75rem;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .picker-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .action-button {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
 .action-button {
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
@@ -391,6 +436,12 @@ const clearSelection = () => {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .preset-controls {
+    gap: 0.5rem;
+  }
 }
 
 .preset-options {
@@ -437,10 +488,38 @@ const clearSelection = () => {
   gap: 0.75rem;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .preset-config {
+    gap: 0.5rem;
+  }
+}
+
 .range-inputs {
   display: flex;
   gap: 1rem;
   align-items: center;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .range-inputs {
+    gap: 0.5rem;
+  }
+  
+  .range-input-group {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .range-label {
+    font-size: 0.6875rem;
+  }
+  
+  .range-input {
+    padding: 0.375rem 0.5rem;
+    font-size: 0.8125rem;
+    width: 100%;
+    min-width: 0;
+  }
 }
 
 .range-input-group {
@@ -466,6 +545,7 @@ const clearSelection = () => {
   transition: all 0.1s ease;
   background: white;
   color: #000;
+  width: 100%;
 }
 
 .range-input:focus {
@@ -483,6 +563,12 @@ const clearSelection = () => {
   font-weight: 600;
   color: #666;
   text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .preset-option {
+    gap: 0.375rem;
+  }
 }
 
 @media (max-width: 640px) {

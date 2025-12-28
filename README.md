@@ -28,7 +28,5 @@ npm run preview
 
 ## Tech Stack
 
-- Vue 3 (latest)
+- Vue 3
 - Vite
-- Tailwind CSS
-- Neobrutalism Vue (via shadcn-vue CLI)

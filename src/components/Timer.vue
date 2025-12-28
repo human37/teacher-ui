@@ -22,7 +22,7 @@
       </div>
 
       <div class="custom-time">
-        <label class="time-label">Custom Time (minutes):</label>
+        <label class="time-label">Custom Time (min):</label>
         <input
           v-model.number="customMinutes"
           type="number"
@@ -280,6 +280,27 @@ onUnmounted(() => {
   margin-bottom: 0;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .timer-section {
+    padding: 0.875rem;
+  }
+  
+  .timer-title {
+    font-size: 1.125rem;
+    margin-bottom: 0.625rem;
+  }
+  
+  .time-display {
+    font-size: 2.25rem;
+    padding: 0.625rem 1.25rem;
+    min-width: 110px;
+  }
+  
+  .timer-display {
+    margin-bottom: 0.875rem;
+  }
+}
+
 .timer-title {
   font-size: 1.25rem;
   font-weight: 900;
@@ -345,11 +366,28 @@ onUnmounted(() => {
   gap: 0.75rem;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .timer-controls {
+    gap: 0.625rem;
+  }
+}
+
 .preset-buttons {
   display: flex;
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .preset-buttons {
+    gap: 0.75rem;
+  }
+  
+  .preset-button {
+    padding: 0.4375rem 0.875rem;
+    font-size: 0.8125rem;
+  }
 }
 
 .preset-button {
@@ -382,6 +420,18 @@ onUnmounted(() => {
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .custom-time {
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+  }
+  
+  .time-label {
+    font-size: 0.8125rem;
+    white-space: nowrap;
+  }
 }
 
 .time-label {
@@ -430,6 +480,19 @@ onUnmounted(() => {
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .action-buttons {
+    gap: 0.75rem;
+  }
+  
+  .action-button {
+    padding: 0.4375rem 0.875rem;
+    font-size: 0.8125rem;
+    flex: 1;
+    min-width: 100px;
+  }
 }
 
 .action-button {
@@ -634,6 +697,14 @@ onUnmounted(() => {
   }
   50% {
     transform: scale(1.05);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .timer-alert {
+    padding: 0.625rem;
+    font-size: 0.9375rem;
+    gap: 0.75rem;
   }
 }
 
