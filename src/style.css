@@ -10,13 +10,18 @@
 
 html, body {
   margin: 0;
+  padding: 0;
   min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: auto;
   background: transparent;
 }
 
 #app {
-  padding: 2rem;
+  padding: 0;
   background: transparent;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: auto;
 }
 

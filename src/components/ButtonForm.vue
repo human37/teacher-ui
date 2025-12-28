@@ -187,7 +187,6 @@ const handleFileSelect = async (event) => {
         formData.value.fileId = fileId
         formData.value.fileName = file.name
         formData.value.fileType = file.type
-        // Don't store fileData in formData - it's in IndexedDB now
         formData.value.fileData = null
       } catch (error) {
         console.error('Error saving file:', error)

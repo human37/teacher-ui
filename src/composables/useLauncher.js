@@ -30,7 +30,6 @@ const loadButtons = () => {
   }
 }
 
-// Save to local storage whenever buttons change
 watch(buttons, (newButtons) => {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(newButtons))
@@ -45,39 +44,19 @@ loadButtons()
 export function useLauncher() {
 
   const addButton = (button) => {
-    // Find a good default position (avoid overlapping)
-    const existingButtons = buttons.value
-    let x = 20
-    let y = 20
-    
-    // Try to find an empty spot
-    for (let i = 0; i < 10; i++) {
-      const testX = snapToGrid(20 + i * 250)
-      const testY = snapToGrid(20 + i * 100)
-      const overlaps = existingButtons.some(b => {
-        const bRight = b.x + (b.width || 200)
-        const bBottom = b.y + (b.height || 80)
-        const testRight = testX + 200
-        const testBottom = testY + 80
-        return !(testX >= bRight || testRight <= b.x || testY >= bBottom || testBottom <= b.y)
-      })
-      if (!overlaps) {
-        x = testX
-        y = testY
-        break
-      }
-    }
+    const finalX = button.x !== undefined ? snapToGrid(button.x) : 20
+    const finalY = button.y !== undefined ? snapToGrid(button.y) : 20
 
     const newButton = {
       id: Date.now().toString(),
       label: button.label || 'New Button',
       url: button.url || '#',
       color: button.color || '#FFFFFF',
-      x: button.x !== undefined ? snapToGrid(button.x) : x,
-      y: button.y !== undefined ? snapToGrid(button.y) : y,
       width: button.width || 200,
       height: button.height || 80,
-      ...button
+      ...button,
+      x: finalX,
+      y: finalY
     }
     buttons.value.push(newButton)
     return newButton

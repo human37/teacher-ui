@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="min-h-screen">
-    <div class="container mx-auto px-4 py-0">
-      <header class="mb-8">
+  <div id="app" class="h-screen flex flex-col">
+    <div class="container mx-auto px-4 py-4 pb-8 flex flex-col flex-1 min-h-0">
+      <header class="mt-4">
         <div class="header-content">
           <img src="/favicon.svg" alt="Launcher" class="header-icon" />
           <h1 class="app-title">Launcher</h1>
@@ -16,7 +16,7 @@
       <div class="buttons-container" :class="{ 'edit-mode-active': editMode }">
         <div class="toolbar">
           <button @click="showAddForm = true" class="add-button">
-            + Add Button
+            + Add
           </button>
           <button 
             v-if="buttons.length > 0"
@@ -24,13 +24,10 @@
             class="edit-mode-button"
             :class="{ active: editMode }"
           >
-            {{ editMode ? 'Done' : 'Edit Mode' }}
+            {{ editMode ? 'Done' : 'Edit' }}
           </button>
         </div>
 
-        <div v-if="buttons.length === 0" class="empty-placeholder">
-          <p class="empty-text">Hover here to add buttons</p>
-        </div>
 
         <LauncherButton
           v-for="button in buttons"
@@ -147,8 +144,8 @@ body {
 
 .buttons-container {
   position: relative;
-  min-height: 300px;
-  max-height: 400px;
+  min-height: 400px;
+  flex: 1;
   overflow: auto;
   margin-top: 2rem;
   background-image: 
@@ -168,31 +165,8 @@ body {
   gap: 0.75rem;
   flex-wrap: wrap;
   z-index: 10;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
 }
 
-.buttons-container:hover .toolbar,
-.buttons-container.edit-mode-active .toolbar {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.empty-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 250px;
-  width: 100%;
-}
-
-.empty-text {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #999;
-  text-align: center;
-}
 
 .add-button,
 .edit-mode-button {
