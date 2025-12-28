@@ -121,6 +121,7 @@ const fileInput = ref(null)
 const showCustomColor = ref(false)
 
 const presetColors = [
+  { name: 'White', value: '#FFFFFF' },
   { name: 'Black', value: '#000000' },
   { name: 'Purple', value: '#9C27B0' },
   { name: 'Yellow', value: '#FFE66D' },
@@ -134,7 +135,7 @@ const presetColors = [
 const formData = ref({
   label: '',
   url: '',
-  color: '#000000',
+  color: '#FFFFFF',
   fileId: null,
   fileName: null,
   fileType: null
@@ -143,7 +144,7 @@ const formData = ref({
 watch(() => props.editingButton, (newButton) => {
   if (newButton) {
     linkType.value = newButton.fileId ? 'file' : 'url'
-    const color = newButton.color || '#000000'
+    const color = newButton.color || '#FFFFFF'
     // Check if color is a preset, otherwise show custom picker
     showCustomColor.value = !presetColors.some(p => p.value === color)
     formData.value = {
@@ -160,7 +161,7 @@ watch(() => props.editingButton, (newButton) => {
     formData.value = {
       label: '',
       url: '',
-      color: '#000000',
+      color: '#FFFFFF',
       fileId: null,
       fileName: null,
       fileType: null

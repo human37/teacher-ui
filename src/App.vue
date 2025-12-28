@@ -2,7 +2,10 @@
   <div id="app" class="min-h-screen">
     <div class="container mx-auto px-4 py-0">
       <header class="mb-8">
-        <h1 class="app-title">Launcher</h1>
+        <div class="header-content">
+          <img src="/favicon.svg" alt="Launcher" class="header-icon" />
+          <h1 class="app-title">Launcher</h1>
+        </div>
       </header>
 
       <div class="top-section pb-4">
@@ -109,11 +112,23 @@ const closeForm = () => {
 </script>
 
 <style scoped>
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
 .app-title {
   font-size: 3rem;
   font-weight: 900;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  margin: 0;
   color: #000;
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
   letter-spacing: -0.02em;

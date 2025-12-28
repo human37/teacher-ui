@@ -72,7 +72,7 @@ export function useLauncher() {
       id: Date.now().toString(),
       label: button.label || 'New Button',
       url: button.url || '#',
-      color: button.color || '#000000',
+      color: button.color || '#FFFFFF',
       x: button.x !== undefined ? snapToGrid(button.x) : x,
       y: button.y !== undefined ? snapToGrid(button.y) : y,
       width: button.width || 200,
