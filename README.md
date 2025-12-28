@@ -2,6 +2,8 @@
 
 A main launcher page intended for teachers. It allows you to add custom links to websites or local files. It includes a timer and a random picker also.
 
+![Launcher Demo](./docs/launcher-demo.png)
+
 ## Development
 
 Install dependencies:
