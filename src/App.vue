@@ -144,7 +144,7 @@ body {
 
 .buttons-container {
   position: relative;
-  min-height: 400px;
+  min-height: 300px;
   flex: 1;
   overflow: auto;
   margin-top: 2rem;

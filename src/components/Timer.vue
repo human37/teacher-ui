@@ -596,6 +596,14 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .fullscreen-overlay {
+    padding: 0;
+    align-items: stretch;
+  }
 }
 
 .fullscreen-timer {
@@ -606,6 +614,22 @@ onUnmounted(() => {
   position: relative;
   min-width: 600px;
   text-align: center;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+@media (max-width: 768px) {
+  .fullscreen-timer {
+    min-width: 0;
+    width: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+    padding: 2rem 1.5rem;
+    border-width: 4px;
+    box-shadow: 8px 8px 0px 0px #000;
+    margin: 0;
+  }
 }
 
 .close-button {
@@ -627,6 +651,18 @@ onUnmounted(() => {
   transition: all 0.1s ease;
 }
 
+@media (max-width: 768px) {
+  .close-button {
+    top: 1rem;
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+    font-size: 2rem;
+    border-width: 3px;
+    box-shadow: 4px 4px 0px 0px #000;
+  }
+}
+
 .close-button:hover {
   transform: translate(2px, 2px);
   box-shadow: 2px 2px 0px 0px #000;
@@ -639,6 +675,13 @@ onUnmounted(() => {
   color: #000;
   margin: 3rem 0;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .fullscreen-time-display {
+    font-size: 6rem;
+    margin: 2rem 0;
+  }
 }
 
 .fullscreen-time-display.ticking {
@@ -669,6 +712,19 @@ onUnmounted(() => {
 .fullscreen-controls .action-button {
   padding: 0.75rem 1.5rem;
   font-size: 1.125rem;
+}
+
+@media (max-width: 768px) {
+  .fullscreen-controls {
+    gap: 1rem;
+  }
+  
+  .fullscreen-controls .action-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    flex: 1;
+    min-width: 100px;
+  }
 }
 
 

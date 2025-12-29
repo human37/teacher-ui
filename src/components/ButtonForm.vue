@@ -239,6 +239,13 @@ const close = () => {
   padding: 1rem;
 }
 
+@media (max-width: 768px) {
+  .form-overlay {
+    padding: 0;
+    align-items: stretch;
+  }
+}
+
 .form-container {
   background: white;
   border: 4px solid #000;
@@ -246,6 +253,21 @@ const close = () => {
   max-width: 500px;
   width: 100%;
   padding: 0;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    max-width: 100%;
+    max-height: 100vh;
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .form-header {
@@ -257,11 +279,23 @@ const close = () => {
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .form-header {
+    padding: 1rem;
+  }
+}
+
 .form-title {
   margin: 0;
   font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .form-title {
+    font-size: 1.25rem;
+  }
 }
 
 .close-button {
@@ -280,6 +314,16 @@ const close = () => {
   transition: all 0.1s ease;
 }
 
+@media (max-width: 768px) {
+  .close-button {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    border-width: 2px;
+    box-shadow: 3px 3px 0px 0px #000;
+  }
+}
+
 .close-button:hover {
   transform: translate(2px, 2px);
   box-shadow: 2px 2px 0px 0px #000;
@@ -287,10 +331,24 @@ const close = () => {
 
 .form-content {
   padding: 2rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .form-content {
+    padding: 1.5rem 1rem;
+  }
 }
 
 .form-group {
   margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
 }
 
 .form-label {
@@ -322,6 +380,13 @@ const close = () => {
   grid-template-columns: repeat(5, 1fr);
   gap: 0.75rem;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .preset-colors {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
 }
 
 .preset-color-button {
@@ -433,6 +498,15 @@ const close = () => {
   margin-top: 2rem;
 }
 
+@media (max-width: 768px) {
+  .form-actions {
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid #000;
+  }
+}
+
 .btn {
   flex: 1;
   padding: 1rem;
@@ -443,6 +517,14 @@ const close = () => {
   cursor: pointer;
   transition: all 0.1s ease;
   font-family: system-ui, -apple-system, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    border-width: 3px;
+  }
 }
 
 .btn-primary {
@@ -456,6 +538,16 @@ const close = () => {
   box-shadow: 3px 3px 0px 0px #000;
 }
 
+@media (max-width: 768px) {
+  .btn-primary {
+    box-shadow: 4px 4px 0px 0px #000;
+  }
+  
+  .btn-primary:hover {
+    box-shadow: 2px 2px 0px 0px #000;
+  }
+}
+
 .btn-secondary {
   background: white;
   color: #000;
@@ -465,6 +557,16 @@ const close = () => {
 .btn-secondary:hover {
   transform: translate(3px, 3px);
   box-shadow: 3px 3px 0px 0px #000;
+}
+
+@media (max-width: 768px) {
+  .btn-secondary {
+    box-shadow: 4px 4px 0px 0px #000;
+  }
+  
+  .btn-secondary:hover {
+    box-shadow: 2px 2px 0px 0px #000;
+  }
 }
 </style>
 
